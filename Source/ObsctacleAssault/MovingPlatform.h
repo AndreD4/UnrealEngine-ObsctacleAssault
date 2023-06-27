@@ -39,6 +39,15 @@ public:
   float MyFloat = 5.99;
 
   UPROPERTY(EditAnywhere)
+  float InputFloatA = 0;
+
+  UPROPERTY(EditAnywhere)
+  float InputFloatB = 0;
+
+  UPROPERTY(EditAnywhere)
+  float APlusBFloat = 0;
+
+  UPROPERTY(EditAnywhere)
   bool MyBool = true;
 
 
