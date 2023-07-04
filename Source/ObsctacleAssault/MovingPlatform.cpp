@@ -36,8 +36,10 @@ void AMovingPlatform::Tick(float DeltaTime)
   
   if (DistanceMoved > MoveDistance)
   {
+    FVector MoveDirection = PlatformVelcoity.GetSafeNormal();
+    StartLocation = StartLocation + MoveDirection * MoveDistance;
+    SetActorLocation(StartLocation);
     PlatformVelcoity = -PlatformVelcoity;
-    StartLocation = CurrentLocation;
   }
   
   
