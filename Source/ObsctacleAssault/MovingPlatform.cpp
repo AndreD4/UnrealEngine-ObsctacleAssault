@@ -19,11 +19,12 @@ void AMovingPlatform::BeginPlay()
 void AMovingPlatform::Tick(float DeltaTime)
 {
   Super::Tick(DeltaTime);
-  
+
   // Move platforms forward
       //Get current loctaion.
   FVector CurrentLocation = GetActorLocation();
       //Add vector to that location.
+  CurrentLocation.X = CurrentLocation.X + 1;
       //Set the location.
   SetActorLocation(CurrentLocation);
     //Send platform back if gone too far
